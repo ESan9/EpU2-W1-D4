@@ -24,8 +24,6 @@
 
 .p {
   position: absolute;
-  width: 100%;
-  opacity: 0;
   transform: translateY(100%);
   animation-name: nascondino;
   animation-duration: 12s;
