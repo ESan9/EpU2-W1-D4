@@ -8,3 +8,72 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+#testoAlternato {
+  border: 2px solid rgb(63, 63, 63);
+  width: 400px;
+  height: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgb(63, 63, 63);
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  margin: 5em;
+  position: relative;
+}
+
+.p {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+  animation-name: nascondino;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  margin-left: 5px;
+}
+
+.p:nth-child(1) {
+  animation-delay: 4s;
+}
+
+.p:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.p:nth-child(3) {
+  animation-delay: 8s;
+}
+
+@keyframes nascondino {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  /* Appare da sopra */
+  10% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  /* Resta visibile per un tot */
+  30% {
+    opacity: 1;
+    transform: translateY(0%);
+    color: brown;
+  }
+
+  /* Scende e via via scompare */
+  40% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  /* Gioca a nascondino perché anche le altre parole devono avere il loro momento di gloria */
+  100% {
+    opacity: 0;
+    transform: translateY(-100%); /* Torna all'inizio */
+  }
+}
