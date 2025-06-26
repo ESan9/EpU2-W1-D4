@@ -57,14 +57,14 @@
   }
 
   /* Resta visibile per un tot */
-  30% {
+  20% {
     opacity: 1;
     transform: translateY(0%);
     color: brown;
   }
 
   /* Scende e via via scompare */
-  40% {
+  30% {
     opacity: 0;
     transform: translateY(100%);
   }
@@ -72,6 +72,5 @@
   /* Gioca a nascondino perché anche le altre parole devono avere il loro momento di gloria */
   100% {
     opacity: 0;
-    transform: translateY(-100%); /* Torna all'inizio */
   }
 }
