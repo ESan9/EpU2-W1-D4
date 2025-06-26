@@ -1,0 +1,109 @@
+body {
+  background-color: gray;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.6em;
+}
+
+#cont1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+
+#cont2 {
+  display: flex;
+  justify-content: space-around;
+  height: 50%;
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+#cont1 div {
+  box-shadow: 5px 5px 5px rgb(78, 78, 78);
+  width: 230px;
+  height: 180px;
+  z-index: 1;
+}
+
+#cont2 div {
+  box-shadow: 5px 5px 5px rgb(78, 78, 78);
+  border-radius: 2px;
+  width: 230px;
+  height: 180px;
+  z-index: 1;
+}
+
+.gialli {
+  background-color: #f2f3c0;
+}
+
+.verdi {
+  background-color: #bbe1bd;
+}
+
+div:not(.verdi, .gialli) {
+  background-color: #b5b4d3;
+}
+
+div.gialli,
+div.verdi,
+div.viola {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+p {
+  margin-right: 2em;
+}
+
+@keyframes schiacciamento {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+div.gialli {
+  transform: rotate(-10deg);
+  transition: 1.5s;
+  animation-name: schiacciamento;
+  animation-duration: 2s;
+}
+
+div.verdi {
+  transform: rotate(10deg);
+  transition: 1.5s;
+  animation-name: schiacciamento;
+  animation-duration: 2s;
+}
+
+div.viola {
+  transform: rotate(-12deg);
+  transition: 1.5s;
+  animation-name: schiacciamento;
+  animation-duration: 2s;
+}
+
+div.gialli:hover {
+  transform: scale(1.4);
+}
+
+div.verdi:hover {
+  transform: scale(1.4);
+}
+
+div.viola:hover {
+  transform: scale(1.4);
+}
